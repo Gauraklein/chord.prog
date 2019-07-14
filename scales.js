@@ -1,12 +1,14 @@
 
 const cMajor = ["C", "D", "em", "F", "G", "am", "bdim"]; // array of chords in a scale
 
-const progressions = [[1, 1, 4, 5], [1, 4, 6, 5]] // array of chord progressions.
 
 
 function generator (array) {
     let newProgression = []; 
     
+    const progressions = [[1, 1, 4, 5], [1, 4, 6, 5]] // array of chord progressions.
+
+
     //this will be the resulting progression
     
     let progressionArray = progressions[Math.floor(Math.random() * progressions.length)]; 
@@ -34,3 +36,6 @@ console.log(generator(cMajor));
 
 // how to make the generator not repeat itself;
 // should I store the chords in an array or an object?
+
+//create an object with the progressions, that can use tags like 'happy' etc. 
+//look into for in so you can loop through object the same way
