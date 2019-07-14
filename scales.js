@@ -1,6 +1,14 @@
 
 const cMajor = ["C", "D", "em", "F", "G", "am", "bdim"]; // array of chords in a scale
 
+const scales = {
+    c: {
+    major: ["C", "D", "Em", "F", "G", "Am", "Bdim"],
+    minor: ["Cm", "Ddim", "Ebmaj", "Fmin", "Gmin", "Abmaj", "Bbmaj" ]
+    }
+}
+
+//object that can contain all the different scales
 
 
 function generator (array) {
@@ -27,7 +35,7 @@ function generator (array) {
 
 }
 
-console.log(generator(cMajor));
+console.log(generator(scales.c.major));
 
 
 // a chord progression generator
@@ -35,7 +43,8 @@ console.log(generator(cMajor));
 //things to look into
 
 // how to make the generator not repeat itself;
-// should I store the chords in an array or an object?
+
 
 //create an object with the progressions, that can use tags like 'happy' etc. 
 //look into for in so you can loop through object the same way
+
