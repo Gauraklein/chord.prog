@@ -3,12 +3,67 @@ const cMajor = ["C", "D", "em", "F", "G", "am", "bdim"]; // array of chords in a
 
 const scales = {
     c: {
-    major: ["C", "D", "Em", "F", "G", "Am", "Bdim"],
-    minor: ["Cm", "Ddim", "Ebmaj", "Fmin", "Gmin", "Abmaj", "Bbmaj" ]
+        major: ["C", "D", "Em", "F", "G", "Am", "Bdim"],
+        minor: ["Cmin", "Ddim", "Eb", "Fmin", "Gmin", "Ab", "Bb" ]
+    },
+
+    'c#': {
+        major: ['C#', 'D#', 'Fmin', 'F#', 'G#', 'A#min', 'Cdim'],
+        minor: ['C#', 'D#dim', 'E', 'F#min', 'G#min', 'A', 'B']
+    },
+
+    d: {
+        major: ['D', 'E', 'F#min', 'G', 'A', 'Bmin', 'Cdim'],
+        minor: ['Dmin', 'Edim', 'F', 'Gmin', 'Amin', 'B', 'C']
+    },
+
+    'd#': {
+        major: ['D#', 'F', 'Gmin', 'G#', 'A#', 'Cmin', 'Ddim'],
+        minor: ['D#min', 'Fdim', 'F#', 'G#min', 'A#min', 'B', 'C#']
+    },
+
+    e: {
+        major: ['E', 'F#', 'G#min', 'A', 'B', 'C#min', 'D#dim'],
+        minor: ['Emin', 'F#dim', 'G', 'Amin', 'Bmin', 'C', 'D']
+    },
+
+    f: {
+        major: ['F', 'G', 'Am', 'A#', 'C', 'Dmin', 'Edim'],
+        minor: ['Fmin', 'Gdim', 'G#', 'A#min', 'Cmin', 'C#', 'D#']
+    },
+
+    'f#': {
+        major: ['F#', 'G#', 'A#min', 'B', 'C#', 'D#min', 'Fdim'],
+        minor: ['F#min', 'G#dim', 'A', 'Bmin', 'C#min', 'D', 'E']
+    },
+
+    g: {
+        major: ['G', 'A', 'Bmin', 'C', 'D', 'Emin', 'F#dim'],
+        minor: ['Gmin', 'Adim', 'A#', 'Cmin', 'Dmin', 'D#', 'F']
+    },
+
+    'g#': {
+        major: ['G#', 'A#', 'Cmin', 'C#', 'D#', 'Fmin', 'Gdim'],
+        minor: ['G#min', 'A#dim', 'B', 'C#min', 'D#min', 'E', 'F#']
+    },
+
+    a: {
+        major: ['A', 'B', 'C#min', 'D', 'E', 'F#min', 'G#dim'],
+        minor: ['Amin', 'Bdim', 'C', 'Dmin', 'Emin', 'F', 'G']
+    },
+
+    'a#': {
+        major: ['A#', 'C', 'Dmin', 'D#', 'F', 'Gmin', 'Adim'],
+        minor: ['A#min', 'Cdim', 'C#', 'D#min', 'Fmin', 'F#', 'G#']
+    },
+
+    b: {
+        major: ['B', 'C#', 'D#min', 'E', 'F#', 'G#min', 'A#dim'],
+        minor: ['Bmin', 'C#dim', 'D', 'Emin', 'F#min', 'G', 'A']
     }
 }
 
-//object that can contain all the different scales
+
 
 
 function generator (array) {
