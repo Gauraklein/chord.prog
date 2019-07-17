@@ -87,10 +87,28 @@ function generator (array) {
     // I had to subtract 1 from the chord number to make it pull the right chord
     
     return newProgression;
+   
 
 }
 
-console.log(generator(scales.c.major));
+// console.log(generator(scales['c']['major']));  
+
+function generate () {
+
+    //function that runs when the button clicks it basically finds the key and scale that the user puts in
+    //then inserts them into the previous function
+    //in theory this could be part of the original function but I'm going to leave it like this for now
+
+    var key = document.getElementById("key").value; //finding key
+    var scale = document.getElementById("scale").value; //finding scale
+
+    var generatedProgression = generator(scales[key][scale]); //creating a variable that runs the function with the user input
+
+   return document.getElementById("demo").innerHTML = generatedProgression.join(", "); //converting the array into a string and printing it to the document
+
+    // console.log(generatedProgression);
+}
+
 
 
 // a chord progression generator
@@ -102,4 +120,11 @@ console.log(generator(scales.c.major));
 
 //create an object with the progressions, that can use tags like 'happy' etc. 
 //look into for in so you can loop through object the same way
+
+//jquery val
+//when the generate button is clicked, I take the value from key 
+//and the value from scale then insert them into my function
+//from there I have to figure out how to return them
+//I guess I can start with the console?
+
 
