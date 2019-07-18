@@ -1,0 +1,41 @@
+body {
+  margin: 0px;
+  background-color: gray;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.piano-white {
+  width: 20px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid black;
+  right: 10px;
+}
+
+.piano-black {
+  width: 20px;
+  height: 70px;
+  background-color: black;
+  border: 2px solid white;
+  right: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
