@@ -9,8 +9,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="content">
-        <div id="piano" class="flex-row">
+    <div id="content" class="flex-column">
+        <div id="content-header">
+        <h1>Chord.Prog</h1>
+        <h4>A Chord Progression Generator</h4>
+        </div>
+
+        <div id="generator">
+            <div id="generator-options" class="flex-row">
+                <select name="key" id="key">
+                <option value="c">C</option>
+                <option value="c#">C#</option>
+                <option value="d">D</option>
+                <option value="d#">D#</option>
+                <option value="e">E</option>
+                <option value="f">F</option>
+                <option value="f#">F#</option>
+                <option value="g">G</option>
+                <option value="g#">G#</option>
+                <option value="a">A</option>
+                <option value="a#">A#</option>
+                <option value="b">B</option>
+                </select>
+                <select name="scale" id="scale">
+                <option value="major">Major</option>
+                <option value="minor">Minor</option>
+                </select>
+                <button onclick="generate()" id="generate">Generate</button>
+             </div>
+        
+            <div id="generated-progression" class="flex-row">
+        
+                <div class="chord-tile flex-column" id="chord1"></div>
+                <div class="chord-tile flex-column" id="chord2"></div>
+                <div class="chord-tile flex-column" id="chord3"></div>            
+                <div class="chord-tile flex-column" id="chord4"></div>
+            </div>
+        </div>
+        
+        <footer>
+            
+            <p>a work in progress</p>
+        
+        </footer>
+    </div>
+
+</body>
+</html>
+
+     <!-- <div id="piano" class="flex-row">
             <div class="piano-white c-key" ></div>
             <div class="piano-black c-sharpkey"></div>
             <div class="piano-white d-key" ></div>
@@ -36,30 +83,4 @@
             <div class="piano-black a-sharp-key"></div>
             <div class="piano-white b-key"></div>
             <div class="piano-white-key c-key"></div>
-        </div>
-        <select name="key" id="key">
-            <option value="c">C</option>
-            <option value="c#">C#</option>
-            <option value="d">D</option>
-            <option value="d#">D#</option>
-            <option value="e">E</option>
-            <option value="f">F</option>
-            <option value="f#">F#</option>
-            <option value="g">G</option>
-            <option value="g#">G#</option>
-            <option value="a">A</option>
-            <option value="a#">A#</option>
-            <option value="b">B</option>
-        </select>
-        <select name="scale" id="scale">
-            <option value="major">Major</option>
-            <option value="minor">Minor</option>
-        </select>
-        <button onclick="generate()" id="generate">Generate</button>
-        <p>Progression: </p>
-        <p id="demo"></p>
-    </form>
-</div>
-
-</body>
-</html>
+        </div> -->

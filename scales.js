@@ -1,4 +1,3 @@
-
 const cMajor = ["C", "D", "em", "F", "G", "am", "bdim"]; // array of chords in a scale
 
 const scales = {
@@ -91,7 +90,7 @@ function generator (array) {
 
 }
 
-// console.log(generator(scales['c']['major']));  
+// console.log(generator(scales['c']['major']));  ---- used to test function
 
 function generate () {
 
@@ -104,9 +103,16 @@ function generate () {
 
     var generatedProgression = generator(scales[key][scale]); //creating a variable that runs the function with the user input
 
-   return document.getElementById("demo").innerHTML = generatedProgression.join(", "); //converting the array into a string and printing it to the document
+    for (let i=1; i < 5; i++) {
 
-    // console.log(generatedProgression);
+        document.getElementById("chord" + i).innerHTML = generatedProgression.shift(); 
+        
+        //for loop to take the first item in array and push it to correct html div
+        //only loops 4 times at the moment, moving forward I want to figure out how to make a variable for longer or shorter chord progressions
+    }  
+     
+    
+    // console.log(generatedProgression); ----used to test function
 }
 
 
@@ -126,5 +132,3 @@ function generate () {
 //and the value from scale then insert them into my function
 //from there I have to figure out how to return them
 //I guess I can start with the console?
-
-

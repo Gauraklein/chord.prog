@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans&display=swap');
+
+// * {
+//     border: 2px solid red;
+// }
+
 body {
     margin: 0px;
-    background-color: gray;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
 }
 
  //frequently used classes
@@ -15,6 +22,19 @@ body {
     flex-direction: row;
 }
 
+.chord-tile {
+    height: 300px;
+    width: 300px;
+    background-color: #f4f4f4;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 2em;
+    font-family: 'Fjalla One', sans-serif;
+    box-shadow: 8px 8px 8px gray;
+    
+}
 
 .piano-white {
     width: 20px;
@@ -31,4 +51,63 @@ body {
     background-color: black;
     border: 2px solid white;
     right: 10px;
+}
+
+//Document
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3em;
+
+}
+
+h4 {
+ font-weight: 400;
+ 
+}
+
+#content {
+    
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+
+}
+
+#generator-options {
+    justify-content: center;
+    margin: 20px;
+    
+}
+select {
+    
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    border: 2px solid black;
+    margin: 5px;
+    
+}
+
+button {
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    margin: 5px;
+    border: 2px solid black;
+    padding: 5px;
+    
+}
+
+
+
+footer {
+    background-color: #373737;
+    text-align: right;
+    color: #f4f4f4;
+    padding: 20px;
+    width: 100%;
+
+    p {
+        margin: 5px;
+    }
 }
