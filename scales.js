@@ -62,21 +62,46 @@ const scales = {
     }
 }
 
-
+const progressions = [
+    [1, 1, 4, 5], 
+    [1, 4, 6, 5],
+    [1, 5, 6, 4],
+    [1, 6, 2, 5],
+    [1, 6, 4, 5],
+    [1, 2, 5, 5],
+    [1, 4, 5, 5],
+    [2, 5, 1, 1],
+    [1, 6, 3, 7],
+    [1, 4, 5, 1],
+    [6, 7, 1, 1],
+    [1, 7, 6, 7],
+    [1, 6, 2, 5],
+    [1, 3, 4, 5],
+    [1, 4, 1, 5],
+    [1, 4, 2, 5]
+] // array of chord progressions.
 
 
 function generator (array) {
     let newProgression = []; 
+    let lastNumber = 0; //this is to store last random number so that there wont be immediate repeats
+    let randomNumber = Math.random() * progressions.length; //this is the random number
+    let progressionArray = [];
+
+    function randomArray () {
     
-    const progressions = [[1, 1, 4, 5], [1, 4, 6, 5]] // array of chord progressions.
+        if (randomNumber != lastNumber) {
+            progressionArray = progressions[Math.floor(randomNumber)]; 
+            lastNumber = randomNumber; 
+        } else {
+             randomArray();
+         }
+    }
 
-
-    //this will be the resulting progression
-    
-    let progressionArray = progressions[Math.floor(Math.random() * progressions.length)]; 
-
+    randomArray();
     //this loads up the chord progression by creating a random integer 
     //then using that integer to call the chord progression from the progressions array
+    //the conditional statement is used to make sure that the random number doesn't show up twice
 
     for (let i = 0; i < progressionArray.length; i++) {
         newProgression.push(array[progressionArray[i] - 1]);

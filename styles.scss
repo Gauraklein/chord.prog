@@ -5,9 +5,14 @@
 // }
 
 body {
-    margin: 0px;
+    background-color: #DDDDDD;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
  //frequently used classes
@@ -23,9 +28,9 @@ body {
 }
 
 .chord-tile {
-    height: 300px;
-    width: 300px;
-    background-color: #f4f4f4;
+    flex: 1;
+    padding: 75px;
+    background-color: #DDDDDD;
     margin: 10px;
     align-items: center;
     justify-content: center;
@@ -36,22 +41,7 @@ body {
     
 }
 
-.piano-white {
-    width: 20px;
-    height: 100px;
-    background-color: white;
-    border: 2px solid black;
-    
-    right:10px;
-}
 
-.piano-black {
-    width: 20px;
-    height: 70px;
-    background-color: black;
-    border: 2px solid white;
-    right: 10px;
-}
 
 //Document
 
@@ -66,36 +56,39 @@ h4 {
  
 }
 
-#content {
-    
-    justify-content: space-between;
+#content-header {
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    justify-content: center;
+}
 
+#generator {
+    align-items: center;
+    justify-content: center;
 }
 
 #generator-options {
     justify-content: center;
     margin: 20px;
     
+    
 }
 select {
     
     border-radius: 5px;
-    background-color: #f4f4f4;
-    border: 2px solid black;
+    background-color: #DDDDDD;
+    border: 4px solid black;
     margin: 5px;
-    
+    font-size: 25px;
 }
 
 button {
     border-radius: 5px;
-    background-color: #f4f4f4;
+    background-color: #DDDDDD;
     margin: 5px;
-    border: 2px solid black;
+    border: 4px solid black;
     padding: 5px;
-    
+    font-size: 25px;
+
 }
 
 
@@ -103,11 +96,30 @@ button {
 footer {
     background-color: #373737;
     text-align: right;
-    color: #f4f4f4;
+    color: #DDDDDD;
     padding: 20px;
-    width: 100%;
+    width: 100vw;
 
     p {
         margin: 5px;
     }
 }
+
+
+//for piano keys may not use for a while
+// .piano-white {
+//     width: 20px;
+//     height: 100px;
+//     background-color: white;
+//     border: 2px solid black;
+    
+//     right:10px;
+// }
+
+// .piano-black {
+//     width: 20px;
+//     height: 70px;
+//     background-color: black;
+//     border: 2px solid white;
+//     right: 10px;
+// }
