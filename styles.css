@@ -1,15 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans&display=swap");
 body {
-  background-color: #DDDDDD;
+  background-color: #0074D9;
+  color: #DDDDDD;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 600;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,6 +11,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100vh;
+}
+
+#content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 95;
+      -ms-flex: 95;
+          flex: 95;
 }
 
 .flex-column {
@@ -44,7 +51,7 @@ body {
       -ms-flex: 1;
           flex: 1;
   padding: 75px;
-  background-color: #DDDDDD;
+  background-color: #0074D9;
   margin: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -55,8 +62,15 @@ body {
   border-radius: 5px;
   font-size: 2em;
   font-family: 'Fjalla One', sans-serif;
-  -webkit-box-shadow: 8px 8px 8px gray;
-          box-shadow: 8px 8px 8px gray;
+  color: #DDDDDD;
+  border: 4px solid #DDDDDD;
+}
+
+@media only screen and (max-width: 600px) {
+  .chord-tile {
+    padding: 10px;
+    font-size: 1.3em;
+  }
 }
 
 h1 {
@@ -84,38 +98,44 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
-#generator-options {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px;
+#spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 select {
   border-radius: 5px;
-  background-color: #DDDDDD;
-  border: 4px solid black;
+  background-color: #0074D9;
+  border: 4px solid #DDDDDD;
   margin: 5px;
   font-size: 25px;
+  color: #DDDDDD;
 }
 
 button {
   border-radius: 5px;
-  background-color: #DDDDDD;
+  background-color: #0074D9;
   margin: 5px;
-  border: 4px solid black;
+  border: 4px solid #DDDDDD;
   padding: 5px;
   font-size: 25px;
+  color: #DDDDDD;
 }
 
 footer {
   background-color: #373737;
-  text-align: right;
+  text-align: center;
   color: #DDDDDD;
   padding: 20px;
-  width: 100vw;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
 }
 
 footer p {

@@ -5,14 +5,21 @@
 // }
 
 body {
-    background-color: #DDDDDD;
+    background-color: #0074D9;
+    color: #DDDDDD;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
+    
     display: flex;
     flex-direction: column;
+    height: 100vh;
+}
+
+#content {
+    justify-content: space-between;
+    align-items: center;
+    flex: 95;
+    
 }
 
  //frequently used classes
@@ -30,14 +37,23 @@ body {
 .chord-tile {
     flex: 1;
     padding: 75px;
-    background-color: #DDDDDD;
+    background-color: #0074D9;
     margin: 10px;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     font-size: 2em;
     font-family: 'Fjalla One', sans-serif;
-    box-shadow: 8px 8px 8px gray;
+    // box-shadow: 8px 8px 8px #DDDDDD;
+    color: #DDDDDD;
+    border: 4px solid #DDDDDD;
+
+    @media only screen and (max-width: 600px) {
+        padding: 10px;
+        font-size: 1.3em;
+        
+    }
+    
     
 }
 
@@ -48,6 +64,7 @@ body {
 h1 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 3em;
+    
 
 }
 
@@ -64,30 +81,37 @@ h4 {
 #generator {
     align-items: center;
     justify-content: center;
+    flex: 2;
 }
 
-#generator-options {
-    justify-content: center;
-    margin: 20px;
+// #generator-options {
+//     justify-content: center;
+//     align-items: center;
     
-    
+// }
+
+#spacer {
+    flex: 1;
 }
+
 select {
     
     border-radius: 5px;
-    background-color: #DDDDDD;
-    border: 4px solid black;
+    background-color: #0074D9;
+    border: 4px solid #DDDDDD;
     margin: 5px;
     font-size: 25px;
+    color: #DDDDDD;
 }
 
 button {
     border-radius: 5px;
-    background-color: #DDDDDD;
+    background-color: #0074D9;
     margin: 5px;
-    border: 4px solid black;
+    border: 4px solid #DDDDDD;
     padding: 5px;
     font-size: 25px;
+    color: #DDDDDD;
 
 }
 
@@ -95,10 +119,10 @@ button {
 
 footer {
     background-color: #373737;
-    text-align: right;
+    text-align: center;
     color: #DDDDDD;
     padding: 20px;
-    width: 100vw;
+    flex: 5;
 
     p {
         margin: 5px;
