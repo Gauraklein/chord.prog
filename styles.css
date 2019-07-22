@@ -101,6 +101,7 @@ h4 {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  background-color: #0074D9;
 }
 
 #spacer {
@@ -111,7 +112,7 @@ h4 {
 
 select {
   border-radius: 5px;
-  background-color: #0074D9;
+  background-color: #0074D9 !important;
   border: 4px solid #DDDDDD;
   margin: 5px;
   font-size: 25px;
